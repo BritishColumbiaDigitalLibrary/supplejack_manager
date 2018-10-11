@@ -81,8 +81,10 @@ staging:
     default:
       database: harvester_staging
       hosts:
-        - localhost:27017
+        # - localhost:27017
+        - <%= 'mongodb-replicaset-staging.cloud.digitalnz.org:27017' %>
       options:
+        connect: :direct
         consistency: :strong
 
 production:
